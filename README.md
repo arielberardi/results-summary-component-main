@@ -4,7 +4,7 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./mobile-version.png)
 
 ## Instructions
 
