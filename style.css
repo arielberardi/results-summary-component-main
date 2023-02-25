@@ -11,6 +11,10 @@
     --lightgray: hsla(240, 12%, 70%, 0.568);
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     box-sizing: border-box;
     padding: 0;
@@ -20,6 +24,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    width: 100%;
     font-family: 'hankengrotesk';
     font-weight: 500;
 }
@@ -43,14 +48,14 @@ main {
     border-bottom-right-radius: 2rem;
 }
 
-.overall-container h2 {
+.overall-container .overall-h2 {
     color: white;
     font-size: 1.2rem;
     margin-top: 1rem;
     margin-bottom: 0;
 }
 
-.overall-container h4 {
+.overall-container .overall-h4 {
     font-size: 1rem;
 }
 
@@ -80,7 +85,7 @@ main {
     margin: 0 1rem;
 }
 
-.summary-stats-container h4 {
+.summary-stats-container .summary-h4 {
     font-size: 1rem;
 }
 
@@ -151,25 +156,26 @@ button:hover {
 
 @media (min-width: 768px) {
     body {
+        display: grid;
+        place-content: center;
+        margin: 1rem;
         background: rgba(226, 225, 225, 0.295);
     }
 
     main {
         flex-direction: row;
-        justify-content: center;
-        background-color: white;
-        border-radius: 1rem;
+        box-shadow: 0px 5px 20px hsl(241, 81%, 54%, 0.3);
+        border-radius: 2rem;
     }
 
     .overall-container {
         border-radius: 2rem;
-        width: 15%;
+        width: 50%;
     }
 
     .summary-stats-container {
-        width: 25%;
-        border-radius: 2rem;
-        margin: 0;
-        padding: 1rem;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;   
+        width: 50%; 
     }
 }
